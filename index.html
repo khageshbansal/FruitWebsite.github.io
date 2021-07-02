@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fruits website</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+
+  <body class="bg-red-500">
+    <!-- This example requires Tailwind CSS v2.0+ -->
+
+    <nav class="">
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center h-16">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-black hover:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              onclick="tog()"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!--
+              Icon when menu is closed.
+  
+              Heroicon name: outline/menu
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="flex-shrink-0 flex items-center">
+              <a href="#"
+                ><h2 class="text-white text-xl font-medium">Fruits</h2></a
+              >
+            </div>
+            <div class="hidden sm:block sm:ml-6">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-white hover:bg-white hover:text-black" -->
+                <a
+                  href="#"
+                  class="bg-white text-black px-3 py-2 rounded-md text-sm font-medium"
+                  aria-current="page"
+                  >Dashboard</a
+                >
+
+                <a
+                  href="#"
+                  class="text-white hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                  >Team</a
+                >
+
+                <a
+                  href="#"
+                  class="text-white hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                  >Projects</a
+                >
+
+                <a
+                  href="#"
+                  class="text-white hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                  >Calendar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-white hover:bg-white hover:text-black" -->
+          <a
+            href="#"
+            class="bg-white text-black block px-3 py-2 rounded-md text-base font-medium"
+            aria-current="page"
+            >Dashboard</a
+          >
+
+          <a
+            href="#"
+            class="text-white hover:bg-white hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+            >Team</a
+          >
+
+          <a
+            href="#"
+            class="text-white hover:bg-white hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+            >Projects</a
+          >
+
+          <a
+            href="#"
+            class="text-white hover:bg-white hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+            >Calendar</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="testmob flex place-items-center justify-between p-10">
+      <div
+        class="content z-10 center flex place-items-center h-full w-2/5 mt-20 flex-col ml-10"
+      >
+        <h1 class="text-6xl font-medium text-white eat">Eat Fresh Everyday</h1>
+        <p class="text-l mt-5 text-white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          eaque quod fugiat quo consectetur maxime voluptatem officia velit.
+          Fugit, illum rerum necessitatibus ipsa quo possimus.
+        </p>
+      </div>
+      <img id="image" src="aple.png" class="w-2/4" />
+    </div>
+    <h1 id="text" class="absolute font-medium text-black">Apple</h1>
+    <ul class="flex place-items-center justify-center w-full h-full">
+      <li>
+        <img src="aple.png" onclick="apple()" class="w-32 border mr-5" />
+      </li>
+      <li>
+        <img src="mango.png" onclick="mango()" class="w-32 border mr-5" />
+      </li>
+
+      <li>
+        <img src="avac.png" onclick="avac()" class="w-32 border mr-5" />
+      </li>
+      <li>
+        <img src="drag.png" onclick="drag()" class="w-32 border mr-5" />
+      </li>
+    </ul>
+  </body>
+  <style>
+    li img:hover {
+      border: solid white 4px;
+      width: 8.2rem;
+      cursor: pointer;
+    }
+
+    #image {
+      height: 350px;
+      width: 600px;
+    }
+
+    ul img {
+      height: 100px;
+      object-fit: cover;
+    }
+    #text {
+      opacity: 10%;
+      font-size: 150px;
+      text-align: center;
+      top: 5px;
+      left: 100px;
+      z-index: -10;
+    }
+
+    @media only screen and (max-width: 630px) {
+      .testmob {
+        flex-direction: column;
+      }
+      .eat {
+        font-size: 100px;
+        text-align: left;
+      }
+      #text {
+        top: 0;
+      }
+    }
+  </style>
+  <script>
+    function apple() {
+      //  background
+      document.body.style.backgroundColor = "#EF4444";
+      document.getElementById("image").src = "aple.png";
+      document.getElementById("text").innerText = "Apple";
+    }
+
+    function mango() {
+      //  background
+      document.body.style.backgroundColor = "#FBBF24";
+      document.getElementById("image").src = "mango.png";
+      document.getElementById("text").innerText = "Mango";
+    }
+
+    function avac() {
+      //  background
+      document.body.style.backgroundColor = "#047857";
+      document.getElementById("image").src = "avac.png";
+      document.getElementById("text").innerText = "Avacado";
+    }
+
+    function drag() {
+      //  background
+      document.body.style.backgroundColor = "#BE185D";
+      document.getElementById("image").src = "drag.png";
+      document.getElementById("text").innerText = "DragonFruit";
+    }
+
+    function tog() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    }
+  </script>
+</html>
